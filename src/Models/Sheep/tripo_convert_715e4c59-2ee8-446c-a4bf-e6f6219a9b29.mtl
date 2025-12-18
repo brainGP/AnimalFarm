@@ -1,0 +1,16 @@
+# Blender 4.5.0 MTL File: 'None'
+# www.blender.org
+
+newmtl tripo_mat_715e4c59-2ee8-446c-a4bf-e6f6219a9b29
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Sheep_basecolor.JPEG
+map_Ns Sheep_roughness.JPEG
+map_Pr Sheep_roughness.JPEG
+map_refl Sheep_metallic.JPEG
+map_Pm Sheep_metallic.JPEG
+map_Bump -bm 1.000000 Sheep_normal.JPEG

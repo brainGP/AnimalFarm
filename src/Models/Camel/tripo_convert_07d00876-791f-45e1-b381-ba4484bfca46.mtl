@@ -1,0 +1,16 @@
+# Blender 4.5.0 MTL File: 'None'
+# www.blender.org
+
+newmtl tripo_mat_07d00876-791f-45e1-b381-ba4484bfca46
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd Camel2_basecolor.JPEG
+map_Ns Camel2_roughness.JPEG
+map_Pr Camel2_roughness.JPEG
+map_refl Camel2_metallic.JPEG
+map_Pm Camel2_metallic.JPEG
+map_Bump -bm 1.000000 Camel2_normal.JPEG
