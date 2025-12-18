@@ -1,18 +1,15 @@
 #define GL_SILENCE_DEPRECATION 1
 #include "animals.h"
 
-// ---------- GLOBALS ----------
 int totalAnimals = 5;
 Animal animals[5];
 float realSizeScale[5] = {1.0f, 0.9f, 0.65f, 1.2f, 0.6f};
 
-// camera
 float camX = 0, camZ = -50.0f;
 float camAngle = 180.0f;
 float camHeight = 8.0f;
 float moveSpeed = 2.0f, rotSpeed = 10.0f;
 
-// ---------- AUDIO ----------
 void playSound(char* file) {
     SystemSoundID id;
     CFURLRef url = CFBundleCopyResourceURL(CFBundleGetMainBundle(),
@@ -23,7 +20,6 @@ void playSound(char* file) {
     AudioServicesPlaySystemSound(id);
 }
 
-// ---------- TEXTURE ----------
 GLuint loadTexture(const char* file) {
     int w, h, n;
     unsigned char* data = stbi_load(file, &w, &h, &n, 3);
@@ -100,12 +96,12 @@ void loadOBJ(Animal* A) {
 // ---------- DRAW ANIMAL ----------
 void drawAnimal(Animal* A, int index) {
     glPushMatrix();
-    glTranslatef(A->xPos, 0, A->zPos); // move X/Z
-    glRotatef(90.0f, 0, 1, 0); // rotate Y
+    glTranslatef(A->xPos, 0, A->zPos); 
+    glRotatef(90.0f, 0, 1, 0); 
     glScalef(A->scaleMul * realSizeScale[index],
              A->scaleMul * realSizeScale[index],
              A->scaleMul * realSizeScale[index]);
-    glTranslatef(-A->centerX, -A->minY, -A->centerZ); // center
+    glTranslatef(-A->centerX, -A->minY, -A->centerZ);
     glBindTexture(GL_TEXTURE_2D, A->textureID);
     glBegin(GL_TRIANGLES);
     for (int j = 0; j < A->drawCount; j++) {
